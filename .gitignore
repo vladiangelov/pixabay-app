@@ -14,6 +14,9 @@
 # Env variables
 .env
 
+# Cypress env variables for amplify
+cypress.env.json
+
 # misc
 .DS_Store
 .env.local

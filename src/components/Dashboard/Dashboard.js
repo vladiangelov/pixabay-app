@@ -44,7 +44,9 @@ async function getPhotos(activeFolder, page, setData, setIsLoading) {
 // Sub-components
 // -----------------------------------------------------------------------------
 
-const Layout = styled.div`
+const Layout = styled.div.attrs({
+  "data-cy": "pixabay-react-app",
+})`
   background-color: ${({ theme }) => theme.colors.white};
   position: relative;
   width: 375px;
