@@ -10,8 +10,10 @@ const Layout = styled.div`
   height: 60px;
   width: 100%;
   height: 100px;
-  padding: 6px 100px;
+  padding: 6px 0px;
+  text-align: center;
   ${mq(`mediumUp`)} {
+    padding: 6px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,13 +21,19 @@ const Layout = styled.div`
 `
 
 const Logo = styled.p`
-  font-size: 30px;
+  font-size: 26px;
   flex-grow: 0;
   color: ${({ theme }) => theme.colors.easternBlue};
+  ${mq(`mediumUp`)} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 const UserAction = styled.div`
   display: flex;
+  justify-content: center;
 `
 
 const UserEmail = styled.p`

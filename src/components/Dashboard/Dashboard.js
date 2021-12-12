@@ -47,13 +47,13 @@ async function getPhotos(activeFolder, page, setData, setIsLoading) {
 const Layout = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   position: relative;
-  width: 500px;
+  width: 375px;
   margin: 10px auto;
   ${mq(`mediumUp`)} {
-    width: 700px;
+    width: 600px;
   }
 
-  ${mq(`mediumUp`)} {
+  ${mq(`largeUp`)} {
     width: 800px;
   }
 `
@@ -88,7 +88,9 @@ const Dashboard = () => {
       />
       {isLoading ? (
         // TODO: Add a proper component (i.e. a Spinner)
-        <div>Data is being loaded...</div>
+        <Fileview>
+          <div>Data is being loaded...</div>
+        </Fileview>
       ) : (
         <Fileview>
           <PaginationNav
