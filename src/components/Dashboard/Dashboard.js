@@ -33,13 +33,10 @@ const buildUrl = (activeFolder, page) => {
 async function getPhotos(activeFolder, page, setData, setIsLoading) {
   try {
     const response = await axios.get(buildUrl(activeFolder, page))
-    console.log(`new data fetch`)
-    console.log(response.data.hits)
     setData(response.data.hits)
     setIsLoading(() => false)
   } catch (error) {
     // TODO: Show error message to the user and log error to a service
-    console.error(error)
   }
 }
 
