@@ -27,7 +27,7 @@ const buildUrl = (activeFolder, page) => {
   const { query, type } = activeFolder
   const isVideo = type === `video` ? `/videos` : ``
 
-  return `https://pixabay.com/api${isVideo}?key=${API_KEY}&q=${query}&per_page=50&page=${page}`
+  return `https://pixabay.com/api/${isVideo}?key=${API_KEY}&q=${query}&per_page=50&page=${page}`
 }
 
 async function getPhotos(activeFolder, page, setData, setIsLoading) {
